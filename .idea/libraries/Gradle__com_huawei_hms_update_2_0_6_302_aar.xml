@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.huawei.hms:update:2.0.6.302@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9d0294e296bdc1e3f350eda510eacbd9/update-2.0.6.302/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9d0294e296bdc1e3f350eda510eacbd9/update-2.0.6.302/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9d0294e296bdc1e3f350eda510eacbd9/update-2.0.6.302/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/930bf30f9608740670e79e57ec858e16/update-2.0.6.302/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/930bf30f9608740670e79e57ec858e16/update-2.0.6.302/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/930bf30f9608740670e79e57ec858e16/update-2.0.6.302/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

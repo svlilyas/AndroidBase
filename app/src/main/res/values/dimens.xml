@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_component_1x">8dp</dimen>
+    <dimen name="margin_component_2x">16dp</dimen>
+    <dimen name="margin_component_3x">24dp</dimen>
+    <dimen name="margin_component_4x">32dp</dimen>
+    <dimen name="margin_component_5x">40dp</dimen>
+    <dimen name="margin_component_6x">48dp</dimen>
+    <dimen name="margin_component_7x">56dp</dimen>
+    <dimen name="margin_component_8x">64dp</dimen>
+    <dimen name="margin_component_9x">72dp</dimen>
+    <dimen name="margin_icon_1x">4dp</dimen>
+    <dimen name="margin_icon_2x">8dp</dimen>
+    <dimen name="margin_icon_3x">12dp</dimen>
+    <dimen name="margin_icon_4x">16dp</dimen>
+    <dimen name="margin_icon_5x">20dp</dimen>
+    <dimen name="margin_icon_6x">24dp</dimen>
+</resources>

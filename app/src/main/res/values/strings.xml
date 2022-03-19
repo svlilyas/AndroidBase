@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Android Base</string>
+    <string name="label_button_login">Login Ol</string>
+</resources>
