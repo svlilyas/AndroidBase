@@ -12,19 +12,16 @@ dependencyResolutionManagement {
         mavenCentral()
     }
     versionCatalogs {
-        create("anx") {
-            from(
-                files(
-                    "versions-stack/libs.versions.toml"
-                )
-            )
+        val version = "2022.12.13"
+        create("rmr") {
+            from("com.redmadrobot.versions:versions-redmadrobot:$version")
         }
-        /*create("rmr") {
-            from(files("versions-rmr/others.versions.toml"))
+        create("androidx") {
+            from("com.redmadrobot.versions:versions-androidx:$version")
         }
         create("stack") {
-            from(files("versions-stack/libs.versions.toml"))
-        }*/
+            from("com.redmadrobot.versions:versions-stack:$version")
+        }
     }
 }
 rootProject.name = "AndroidBase"
