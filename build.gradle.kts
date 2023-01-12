@@ -6,8 +6,8 @@ buildscript {
     }
 
     dependencies {
-        classpath("com.android.tools.build:gradle:7.3.1")
-        classpath(stack.kotlin.gradlePlugin)
+        classpath(libs.stack.build.gradle)
+        classpath(libs.stack.kotlin.gradlePlugin)
     }
 }
 

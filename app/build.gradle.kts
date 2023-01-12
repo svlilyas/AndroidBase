@@ -1,16 +1,17 @@
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    id(libs.plugins.android.application.get().pluginId)
+    id(libs.plugins.kotlin.android.get().pluginId)
 }
 
 android {
     namespace = "com.papirus.androidbase"
-    compileSdk = 33
+    compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
         applicationId = "com.papirus.androidbase"
-        minSdk = 24
-        targetSdk = 33
+        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
 
@@ -27,11 +28,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
     }
     buildFeatures {
         dataBinding = true
@@ -40,13 +41,13 @@ android {
 }
 
 dependencies {
-    implementation(androidx.core)
-    implementation(androidx.appcompat)
-    implementation(stack.material)
-    implementation(androidx.constraintlayout)
-    implementation(androidx.navigation.fragment)
-    implementation(androidx.navigation.ui)
-    testImplementation(stack.junit4)
-    androidTestImplementation(androidx.test.ext.junit)
-    androidTestImplementation(androidx.test.espresso.core)
+    implementation(libs.androidx.core)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.stack.material)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.ui)
+    testImplementation(libs.stack.junit4)
+    androidTestImplementation(libs.androidx.test.ext.junit)
+    androidTestImplementation(libs.androidx.test.espresso.core)
 }
