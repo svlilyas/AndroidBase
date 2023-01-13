@@ -1,8 +1,4 @@
 [versions]
-# Android Configurations
-compileSdk = "33"
-minSdk = "24"
-targetSdk = "33"
 
 # androidx
 core = "1.9.0"
