@@ -1,11 +1,9 @@
-import com.papirus.buildsrc.ModuleDependency.Project.core_extension
+import com.papirus.buildsrc.ModuleDependency.Project.core_model
 
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     id(libs.plugins.stack.android.library.get().pluginId)
     id(libs.plugins.stack.kotlin.android.get().pluginId)
-    id(libs.plugins.stack.kotlin.parcelize.get().pluginId)
-    id(libs.plugins.stack.ksp.get().pluginId) version libs.versions.ksp.get()
 }
 
 android {
@@ -19,8 +17,9 @@ android {
 }
 
 dependencies {
-    // Room
-    implementation(libs.androidx.room.ktx)
-    implementation(libs.androidx.room.runtime)
-    ksp(libs.androidx.room.compiler)
+    implementation(core_model())
+
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.stack.timber)
 }

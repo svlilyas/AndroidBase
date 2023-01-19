@@ -17,3 +17,4 @@ dependencyResolutionManagement {
 rootProject.name = "AndroidBase"
 include(":app")
 include(":core-model")
+include(":core-extension")
