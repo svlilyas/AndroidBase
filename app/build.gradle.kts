@@ -11,10 +11,11 @@ plugins {
     id(libs.plugins.androidx.navigation.safeargs.get().pluginId)
     id(libs.plugins.stack.crashlytics.get().pluginId)
     id(libs.plugins.stack.googleService.get().pluginId)
+    id(libs.plugins.stack.ksp.get().pluginId) version libs.versions.ksp.get()
 }
 
 android {
-    namespace = AndroidConfig.applicationId
+    namespace = AndroidConfig.namespace
     compileSdk = AndroidConfig.compileSdk
 
     defaultConfig {
@@ -121,7 +122,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = AndroidConfig.jvmTarget
     }
 
     buildFeatures {

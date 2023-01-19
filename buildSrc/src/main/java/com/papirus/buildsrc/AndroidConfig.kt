@@ -2,6 +2,7 @@ import java.util.*
 
 object AndroidConfig {
     const val appName = "AndroidBase"
+    const val namespace = "com.papirus.androidbase"
     const val applicationId = "com.papirus.androidbase"
     const val minSdk = 24
     const val targetSdk = 33
@@ -9,6 +10,8 @@ object AndroidConfig {
     const val compileSdk = 33
     const val ndk = "23.0.7599858"
     const val testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+    const val jvmTarget = "11"
 
     const val versionCode = 1
 

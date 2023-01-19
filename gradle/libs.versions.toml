@@ -5,6 +5,7 @@ core = "1.9.0"
 appcompat = "1.5.1"
 constraintlayout = "2.1.4"
 navigation = "2.5.3"
+room = "2.4.3"
 
 test-ext-junit = "1.1.4"
 test-espresso = "3.5.0"
@@ -13,6 +14,7 @@ test-espresso = "3.5.0"
 agp = "7.3.1"
 kotlin = "1.8.0"
 material = "1.7.0"
+ksp = "1.8.0-1.0.8"
 
 junit4 = "4.13.2"
 
@@ -36,9 +38,16 @@ androidx-navigation-plugin = { module = "androidx.navigation:navigation-safe-arg
 androidx-test-ext-junit = { module = "androidx.test.ext:junit-ktx", version.ref = "test.ext.junit" }
 androidx-test-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "test.espresso" }
 
+# Room
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+
 # stack
 stack-kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 stack-agp = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+
+stack-ksp = { module = "com.google.devtools.ksp:symbol-processing", version.ref = "ksp" }
 
 stack-material = { module = "com.google.android.material:material", version.ref = "material" }
 stack-junit4 = { module = "junit:junit", version.ref = "junit4" }
@@ -52,7 +61,7 @@ stack-crashlytics-plugin = { module = "com.google.firebase:firebase-crashlytics-
 stack-googleService-plugin = { module = "com.google.gms:google-services", version.ref = "googleService" }
 
 stack-firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
-stack-firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics"}
+stack-firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
 stack-firebase-messaging = { module = "com.google.firebase:firebase-messaging" }
 stack-firebase-analytics = { module = "com.google.firebase:firebase-analytics-ktx" }
 
@@ -67,6 +76,8 @@ androidx-navigation-safeargs = { id = "androidx.navigation.safeargs", version.re
 stack-android-application = { id = "com.android.application", version.ref = "agp" }
 stack-android-library = { id = "com.android.library", version.ref = "agp" }
 stack-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+stack-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 stack-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 stack-kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
