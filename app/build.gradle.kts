@@ -3,8 +3,14 @@ import com.papirus.buildsrc.Fields
 
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-    id(libs.plugins.android.application.get().pluginId)
-    id(libs.plugins.kotlin.android.get().pluginId)
+    id(libs.plugins.stack.android.application.get().pluginId)
+    id(libs.plugins.stack.kotlin.android.get().pluginId)
+    id(libs.plugins.stack.kotlin.kapt.get().pluginId)
+    id(libs.plugins.stack.kotlin.parcelize.get().pluginId)
+    id(libs.plugins.stack.hilt.plugin.get().pluginId)
+    id(libs.plugins.androidx.navigation.safeargs.get().pluginId)
+    id(libs.plugins.stack.crashlytics.get().pluginId)
+    id(libs.plugins.stack.googleService.get().pluginId)
 }
 
 android {
@@ -25,12 +31,13 @@ android {
         getByName(Flavors.BuildTypes.DEBUG) {
             isMinifyEnabled = false
             isDebuggable = true
-            applicationIdSuffix = ".${Flavors.BuildTypes.DEBUG}"
+            //applicationIdSuffix = ".${Flavors.BuildTypes.DEBUG}"
         }
 
         getByName(Flavors.BuildTypes.RELEASE) {
             isMinifyEnabled = true
             isShrinkResources = true
+            isDebuggable = false
 
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -121,6 +128,10 @@ android {
         dataBinding = true
         viewBinding = true
     }
+
+    hilt {
+        enableAggregatingTask = true
+    }
 }
 
 dependencies {
@@ -130,6 +141,18 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment)
     implementation(libs.androidx.navigation.ui)
+
+    // hilt
+    implementation(libs.stack.hilt.android)
+    kapt(libs.stack.hilt.compiler)
+
+    // firebase
+    implementation(platform(libs.stack.firebase.bom))
+    implementation(libs.stack.firebase.crashlytics)
+    implementation(libs.stack.firebase.messaging)
+    implementation(libs.stack.firebase.analytics)
+
+    // test
     testImplementation(libs.stack.junit4)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.androidx.test.espresso.core)

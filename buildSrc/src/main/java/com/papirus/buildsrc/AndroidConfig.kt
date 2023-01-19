@@ -11,13 +11,12 @@ object AndroidConfig {
     const val testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
     const val versionCode = 1
-    val versionName = calculateVersionName()
 
     private const val versionMajor = 1
     private const val versionMinor = 0
     private const val versionPatch = 0
 
-    private fun calculateVersionName(): String = "v$versionMajor.$versionMinor.$versionPatch"
+    val versionName = "v$versionMajor.$versionMinor.$versionPatch"
 }
 
 object Flavors {

@@ -16,6 +16,13 @@ material = "1.7.0"
 
 junit4 = "4.13.2"
 
+hilt = "2.42"
+timber = "5.0.1"
+
+firebaseGradle = "2.8.0"
+firebaseBom = "31.1.1"
+googleService = "4.3.10"
+
 [libraries]
 
 # androidx
@@ -24,24 +31,45 @@ androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "a
 androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
 androidx-navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation" }
 androidx-navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
+androidx-navigation-plugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigation" }
 
 androidx-test-ext-junit = { module = "androidx.test.ext:junit-ktx", version.ref = "test.ext.junit" }
 androidx-test-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "test.espresso" }
 
 # stack
 stack-kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
-stack-build-gradle = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+stack-agp = { module = "com.android.tools.build:gradle", version.ref = "agp" }
 
 stack-material = { module = "com.google.android.material:material", version.ref = "material" }
 stack-junit4 = { module = "junit:junit", version.ref = "junit4" }
+
+stack-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+stack-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
+stack-hilt-testing = { module = "com.google.dagger:hilt-android-testing", version.ref = "hilt" }
+stack-hilt-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hilt" }
+
+stack-crashlytics-plugin = { module = "com.google.firebase:firebase-crashlytics-gradle", version.ref = "firebaseGradle" }
+stack-googleService-plugin = { module = "com.google.gms:google-services", version.ref = "googleService" }
+
+stack-firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+stack-firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics"}
+stack-firebase-messaging = { module = "com.google.firebase:firebase-messaging" }
+stack-firebase-analytics = { module = "com.google.firebase:firebase-analytics-ktx" }
+
+stack-timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 
 [plugins]
 
 # androidx
 androidx-navigation-safeargs = { id = "androidx.navigation.safeargs", version.ref = "navigation" }
-androidx-navigation-safeargs-kotlin = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
 
 # stack
-android-application = { id = "com.android.application", version.ref = "agp" }
-android-library = { id = "com.android.library", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+stack-android-application = { id = "com.android.application", version.ref = "agp" }
+stack-android-library = { id = "com.android.library", version.ref = "agp" }
+stack-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+stack-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+stack-kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+stack-hilt-plugin = { id = "dagger.hilt.android.plugin", version.ref = "hilt" }
+stack-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebaseGradle" }
+stack-googleService = { id = "com.google.gms.google-services", version.ref = "googleService" }
