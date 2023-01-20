@@ -6,6 +6,11 @@ appcompat = "1.5.1"
 constraintlayout = "2.1.4"
 navigation = "2.5.3"
 room = "2.4.3"
+androidxFragment = "1.5.1"
+databinding = "7.4.0"
+ktx = "1.+"
+lifecycle = "2.+"
+recyclerview = "1.+"
 
 test-ext-junit = "1.1.4"
 test-espresso = "3.5.0"
@@ -15,6 +20,7 @@ agp = "7.3.1"
 kotlin = "1.8.0"
 material = "1.7.0"
 ksp = "1.8.0-1.0.8"
+coil = "2.+"
 
 junit4 = "4.13.2"
 
@@ -35,10 +41,24 @@ androidx-navigation-fragment = { module = "androidx.navigation:navigation-fragme
 androidx-navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
 androidx-navigation-plugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigation" }
 
+# lifecycle
+androidx-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+androidx-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycle" }
+androidx-lifecycle-common = { module = "androidx.lifecycle:lifecycle-common-java8", version.ref = "lifecycle" }
+
+androidx-databinding = { module = "androidx.databinding:databinding-common", version.ref = "databinding" }
+
+androidx-fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "androidxFragment" }
+
+androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
+
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "ktx" }
+androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "ktx" }
+
 androidx-test-ext-junit = { module = "androidx.test.ext:junit-ktx", version.ref = "test.ext.junit" }
 androidx-test-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "test.espresso" }
 
-# Room
+# room
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
@@ -48,6 +68,8 @@ stack-kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugi
 stack-agp = { module = "com.android.tools.build:gradle", version.ref = "agp" }
 
 stack-ksp = { module = "com.google.devtools.ksp:symbol-processing", version.ref = "ksp" }
+
+stack-kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
 
 stack-material = { module = "com.google.android.material:material", version.ref = "material" }
 stack-junit4 = { module = "junit:junit", version.ref = "junit4" }
@@ -66,6 +88,12 @@ stack-firebase-messaging = { module = "com.google.firebase:firebase-messaging" }
 stack-firebase-analytics = { module = "com.google.firebase:firebase-analytics-ktx" }
 
 stack-timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+stack-coil = { module = "io.coil-kt:coil", version.ref = "coil" }
+
+[bundles]
+
+# androidx
+androidx-lifecycle = ["androidx-viewmodel-ktx", "androidx-livedata-ktx", "androidx-lifecycle-common"]
 
 [plugins]
 

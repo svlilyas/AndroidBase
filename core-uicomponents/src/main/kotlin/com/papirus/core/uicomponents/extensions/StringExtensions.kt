@@ -1,4 +1,4 @@
-package com.papirus.core.extension
+package com.papirus.core.uicomponents.extensions
 
 val String.Companion.Empty: String
     inline get() = ""

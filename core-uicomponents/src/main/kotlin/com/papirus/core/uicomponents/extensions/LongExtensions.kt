@@ -1,4 +1,4 @@
-package com.papirus.core.extension
+package com.papirus.core.uicomponents.extensions
 
 import java.util.concurrent.TimeUnit
 

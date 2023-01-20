@@ -1,4 +1,4 @@
-package com.papirus.core.extension
+package com.papirus.core.uicomponents.extensions
 
 import android.content.Context
 import android.os.SystemClock
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.ProgressBar
 import com.papirus.core.model.local.UiState
+import com.papirus.core.uicomponents.binding.ViewBinding.visible
 
 fun View.hideKeyboard() {
     (context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager)
@@ -33,10 +34,10 @@ fun View.removeOnDebouncedClickListener() {
 
 
 fun ProgressBar.changeUiState(uiState: UiState) {
-    /* this.visible = when (uiState) {
-         UiState.LOADING -> true
-         UiState.ERROR, UiState.SUCCESS -> false
-     }*/
+    this.visible = when (uiState) {
+        UiState.LOADING -> true
+        UiState.ERROR, UiState.SUCCESS -> false
+    }
 }
 
 private class ActionDebouncer(private val action: () -> Unit) {

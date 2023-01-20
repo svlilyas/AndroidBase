@@ -1,4 +1,4 @@
-package com.papirus.core.extension
+package com.papirus.core.uicomponents.extensions
 
 import android.os.Bundle
 import androidx.core.os.bundleOf

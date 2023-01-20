@@ -4,6 +4,7 @@ import com.papirus.buildsrc.ModuleDependency.Project.core_model
 plugins {
     id(libs.plugins.stack.android.library.get().pluginId)
     id(libs.plugins.stack.kotlin.android.get().pluginId)
+    id(libs.plugins.stack.kotlin.kapt.get().pluginId)
 }
 
 android {
@@ -14,12 +15,21 @@ android {
         minSdk = AndroidConfig.minSdk
         targetSdk = AndroidConfig.targetSdk
     }
+
+    buildFeatures {
+        dataBinding = true
+    }
 }
 
 dependencies {
     implementation(core_model())
 
+    implementation(libs.stack.coil)
+
+    implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.fragment)
     implementation(libs.androidx.appcompat)
     implementation(libs.stack.timber)
+    implementation(libs.stack.kotlin.reflect)
 }

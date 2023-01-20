@@ -1,4 +1,4 @@
-package com.papirus.core.extension
+package com.papirus.core.uicomponents.extensions
 
 import android.content.res.Resources
 import android.util.TypedValue
