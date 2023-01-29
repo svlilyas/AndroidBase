@@ -1,4 +1,4 @@
-import com.papirus.buildsrc.ModuleDependency.Project.core_model
+import ModuleDependency.Project.core_model
 
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
@@ -8,7 +8,6 @@ plugins {
 }
 
 android {
-    namespace = AndroidConfig.namespace
     compileSdk = AndroidConfig.compileSdk
 
     defaultConfig {

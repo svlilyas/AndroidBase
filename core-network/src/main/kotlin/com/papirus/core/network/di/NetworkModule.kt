@@ -1,6 +1,6 @@
 package com.papirus.core.network.di
 
-import com.papirus.androidbase.BuildConfig
+import com.papirus.core.network.BuildConfig
 import com.papirus.core.network.interceptor.ApiRequestInterceptor
 import com.papirus.core.network.interceptor.AuthenticationInterceptor
 import com.papirus.core.network.interceptor.HttpRequestInterceptor

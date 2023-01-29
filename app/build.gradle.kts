@@ -1,5 +1,7 @@
+import ModuleDependency.Project.core_database
+import ModuleDependency.Project.core_extension
+import ModuleDependency.Project.core_model
 import com.android.build.api.dsl.ApplicationProductFlavor
-import com.papirus.buildsrc.Fields
 
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
@@ -136,12 +138,19 @@ android {
 }
 
 dependencies {
+    implementation(core_model())
+    implementation(core_extension())
+    implementation(core_database())
+
+    implementation(libs.bundles.androidx.lifecycle)
     implementation(libs.androidx.core)
     implementation(libs.androidx.appcompat)
     implementation(libs.stack.material)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment)
     implementation(libs.androidx.navigation.ui)
+
+    implementation(libs.stack.timber)
 
     // hilt
     implementation(libs.stack.hilt.android)

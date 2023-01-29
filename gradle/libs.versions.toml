@@ -11,6 +11,8 @@ databinding = "7.4.0"
 ktx = "1.+"
 lifecycle = "2.+"
 recyclerview = "1.+"
+work-manager = "2.7.1"
+data-store = "1.0.0"
 
 test-ext-junit = "1.1.4"
 test-espresso = "3.5.0"
@@ -20,16 +22,19 @@ agp = "7.3.1"
 kotlin = "1.8.0"
 material = "1.7.0"
 ksp = "1.8.0-1.0.8"
-coil = "2.+"
+coil = "2.2.2"
 moshi = "1.13.0"
+
+leakcanary = "2.10"
+tink = "1.7.0"
 
 coroutines = "1.6.4"
 
 sandwich = "1.2.7"
 
-okhttp = "4.+"
+okhttp = "4.10.0"
 
-retrofit = "2.+"
+retrofit = "2.9.0"
 
 junit4 = "4.13.2"
 
@@ -49,6 +54,11 @@ androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayo
 androidx-navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation" }
 androidx-navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
 androidx-navigation-plugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigation" }
+
+androidx-security-crypto = "androidx.security:security-crypto:1.0.0"
+
+androidx-work-manager-runtime = { module = "androidx.work:work-runtime-ktx", version.ref = "work-manager" }
+androidx-data-store = { module = "androidx.datastore:datastore-preferences", version.ref = "data-store" }
 
 # lifecycle
 androidx-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
@@ -112,6 +122,10 @@ stack-firebase-analytics = { module = "com.google.firebase:firebase-analytics-kt
 
 stack-timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 stack-coil = { module = "io.coil-kt:coil", version.ref = "coil" }
+
+stack-leakcanary = { module = "com.squareup.leakcanary:leakcanary-android", version.ref = "leakcanary" }
+
+stack-tink = { module = "com.google.crypto.tink:tink-android", version.ref = "tink" }
 
 [bundles]
 
