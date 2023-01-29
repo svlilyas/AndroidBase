@@ -2,10 +2,10 @@ package com.papirus.core.uicomponents.binding
 
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
+import com.papirus.core.model.utils.AppConstants.Companion.DATE_DEFAULT
 import com.papirus.core.uicomponents.binding.ViewBinding.gone
 import com.papirus.core.uicomponents.binding.ViewBinding.visible
 import com.papirus.core.uicomponents.utils.DateHelper
-import com.papirus.core.uicomponents.utils.AppConstants.Companion.DATE_DEFAULT
 
 object TextViewBinding {
 

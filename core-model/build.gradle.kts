@@ -1,5 +1,3 @@
-import com.papirus.buildsrc.ModuleDependency.Project.core_extension
-
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     id(libs.plugins.stack.android.library.get().pluginId)

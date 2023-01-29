@@ -1,4 +1,4 @@
-package com.papirus.core.uicomponents.utils
+package com.papirus.core.model.utils
 
 class AppConstants {
     companion object {

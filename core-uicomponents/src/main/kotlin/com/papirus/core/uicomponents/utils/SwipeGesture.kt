@@ -3,7 +3,7 @@ package com.papirus.core.uicomponents.utils
 import android.graphics.Canvas
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.papirus.core.uicomponents.utils.AppConstants.Companion.ZERO_INT
+import com.papirus.core.model.utils.AppConstants.Companion.ZERO_INT
 
 abstract class SwipeGesture :
     ItemTouchHelper.SimpleCallback(ZERO_INT, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {
