@@ -1,5 +1,5 @@
 import ModuleDependency.Project.core_database
-import ModuleDependency.Project.core_extension
+import ModuleDependency.Project.core_network
 import ModuleDependency.Project.core_model
 import com.android.build.api.dsl.ApplicationProductFlavor
 
@@ -139,7 +139,7 @@ android {
 
 dependencies {
     implementation(core_model())
-    implementation(core_extension())
+    implementation(core_network())
     implementation(core_database())
 
     implementation(libs.bundles.androidx.lifecycle)
