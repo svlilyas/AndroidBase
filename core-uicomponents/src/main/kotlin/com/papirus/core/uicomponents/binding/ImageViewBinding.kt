@@ -10,7 +10,6 @@ import com.papirus.core.uicomponents.binding.ViewBinding.gone
 import com.papirus.core.uicomponents.binding.ViewBinding.visible
 
 object ImageViewBinding {
-
     @JvmStatic
     @BindingAdapter(
         value = ["app:imageUrl", "app:placeholder", "app:errorDrawable"],

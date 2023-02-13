@@ -1,9 +1,7 @@
 package com.papirus.androidbase
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.lifecycleScope
@@ -12,6 +10,7 @@ import com.papirus.androidbase.databinding.FragmentFirstBinding
 import com.papirus.core.database.EncryptedDataStoreManager
 import com.papirus.core.model.local.ExampleModel
 import com.papirus.core.model.local.PaymentStatus
+import com.papirus.core.uicomponents.binding.BindingFragment
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.launch
@@ -24,32 +23,18 @@ import javax.inject.Inject
  */
 
 @AndroidEntryPoint
-class FirstFragment : Fragment() {
-
-    private var _binding: FragmentFirstBinding? = null
+class FirstFragment : BindingFragment<FragmentFirstBinding>(R.layout.fragment_first) {
 
     @Inject
     lateinit var dataStore: EncryptedDataStoreManager
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
-        return binding.root
-
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        binding {
+            buttonFirst.setOnClickListener {
+                findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+            }
         }
 
         lifecycleScope.launch {
@@ -96,10 +81,5 @@ class FirstFragment : Fragment() {
                 ExampleModel(str = "Second Changed aldsfkuhgewıuygfhew")
             )
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

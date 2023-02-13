@@ -8,7 +8,6 @@ import com.papirus.core.uicomponents.binding.ViewBinding.visible
 import com.papirus.core.uicomponents.utils.DateHelper
 
 object TextViewBinding {
-
     @JvmStatic
     @BindingAdapter(
         "app:modifiedTimeStamp",

@@ -1,6 +1,7 @@
 import ModuleDependency.Project.core_database
 import ModuleDependency.Project.core_network
 import ModuleDependency.Project.core_model
+import ModuleDependency.Project.core_uicomponents
 import com.android.build.api.dsl.ApplicationProductFlavor
 
 @Suppress("DSL_SCOPE_VIOLATION")
@@ -138,6 +139,7 @@ android {
 }
 
 dependencies {
+    implementation(core_uicomponents())
     implementation(core_model())
     implementation(core_network())
     implementation(core_database())

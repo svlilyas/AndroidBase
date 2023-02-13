@@ -6,7 +6,6 @@ import androidx.activity.OnBackPressedDispatcherOwner
 import androidx.databinding.BindingAdapter
 
 object ViewBinding {
-
     @JvmStatic
     @BindingAdapter("toast")
     fun View.bindToast(text: String?) {
