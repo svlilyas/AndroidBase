@@ -49,9 +49,14 @@ android {
                 "proguard-rules.pro"
             )
         }
+        create("benchmark") {
+            signingConfig = signingConfigs.getByName("debug")
+            matchingFallbacks += listOf("release")
+            isDebuggable = true
+        }
     }
 
-    flavorDimensionList.add(Flavors.FlavorDimensions.ENVIRONMENT)
+    /*flavorDimensionList.add(Flavors.FlavorDimensions.ENVIRONMENT)
     productFlavors {
         create(Flavors.ProductFlavors.DEV) {
             dimension = Flavors.FlavorDimensions.ENVIRONMENT
@@ -63,39 +68,6 @@ android {
                 "app_label_name",
                 "${AndroidConfig.appName}$versionNameSuffix"
             )
-            // BuildConfigField
-            stringField(Fields.SERVICE_URL to "https://api.openweathermap.org/data/")
-            stringField(Fields.SERVICE_API_KEY to "")
-            stringField(Fields.SERVICE_CERTIFICATE_PATH to "")
-        }
-
-        create(Flavors.ProductFlavors.UAT) {
-            dimension = Flavors.FlavorDimensions.ENVIRONMENT
-            //applicationIdSuffix = ".${Flavors.ProductFlavors.UAT}"
-            versionNameSuffix = "_${Flavors.ProductFlavors.UAT}"
-
-            resValue(
-                "string",
-                "app_label_name",
-                "${AndroidConfig.appName}$versionNameSuffix"
-            )
-            // BuildConfigField
-            stringField(Fields.SERVICE_URL to "https://api.openweathermap.org/data/")
-            stringField(Fields.SERVICE_API_KEY to "")
-            stringField(Fields.SERVICE_CERTIFICATE_PATH to "")
-        }
-
-        create(Flavors.ProductFlavors.PILOT) {
-            dimension = Flavors.FlavorDimensions.ENVIRONMENT
-            //applicationIdSuffix = ".${Flavors.ProductFlavors.PILOT}"
-            versionNameSuffix = "_${Flavors.ProductFlavors.PILOT}"
-
-            resValue(
-                "string",
-                "app_label_name",
-                "${AndroidConfig.appName}$versionNameSuffix"
-            )
-
             // BuildConfigField
             stringField(Fields.SERVICE_URL to "https://api.openweathermap.org/data/")
             stringField(Fields.SERVICE_API_KEY to "")
@@ -118,7 +90,7 @@ android {
             stringField(Fields.SERVICE_API_KEY to "")
             stringField(Fields.SERVICE_CERTIFICATE_PATH to "")
         }
-    }
+    }*/
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -165,6 +137,8 @@ dependencies {
     implementation(libs.stack.firebase.crashlytics)
     implementation(libs.stack.firebase.messaging)
     implementation(libs.stack.firebase.analytics)
+
+    implementation(libs.androidx.profile.installer)
 
     // test
     testImplementation(libs.stack.junit4)

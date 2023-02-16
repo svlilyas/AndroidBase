@@ -15,6 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidBase"
         tools:targetApi="31">
+        <profileable
+            android:shell="true"
+            tools:targetApi="29" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -31,7 +35,6 @@
             android:authorities="com.papirus.androidbase.androidx-startup"
             android:exported="false"
             tools:node="merge">
-
             <meta-data
                 android:name="com.papirus.androidbase.initializer.AppComponentInitializer"
                 android:value="androidx.startup" />
