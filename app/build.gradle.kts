@@ -1,7 +1,7 @@
 import ModuleDependency.Project.core_database
-import ModuleDependency.Project.core_network
 import ModuleDependency.Project.core_model
 import ModuleDependency.Project.core_navigation
+import ModuleDependency.Project.core_network
 import ModuleDependency.Project.core_uicomponents
 import com.android.build.api.dsl.ApplicationProductFlavor
 
@@ -170,6 +170,8 @@ dependencies {
     testImplementation(libs.stack.junit4)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.androidx.test.espresso.core)
+
+    debugImplementation(libs.stack.leakcanary)
 }
 
 fun ApplicationProductFlavor.stringField(entry: Pair<String, String>) {

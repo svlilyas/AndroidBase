@@ -2,8 +2,6 @@ package com.papirus.androidbase
 
 import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.papirus.androidbase.databinding.FragmentSecondBinding
 import com.papirus.core.navigation.navigateToFirstFragment
 import com.papirus.core.uicomponents.binding.BindingFragment
