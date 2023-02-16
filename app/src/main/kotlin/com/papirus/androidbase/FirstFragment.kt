@@ -10,6 +10,7 @@ import com.papirus.androidbase.databinding.FragmentFirstBinding
 import com.papirus.core.database.EncryptedDataStoreManager
 import com.papirus.core.model.local.ExampleModel
 import com.papirus.core.model.local.PaymentStatus
+import com.papirus.core.navigation.navigateToSecondFragment
 import com.papirus.core.uicomponents.binding.BindingFragment
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.flowOf
@@ -17,10 +18,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import timber.log.Timber
 import javax.inject.Inject
-
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
 
 @AndroidEntryPoint
 class FirstFragment : BindingFragment<FragmentFirstBinding>(R.layout.fragment_first) {
@@ -33,7 +30,8 @@ class FirstFragment : BindingFragment<FragmentFirstBinding>(R.layout.fragment_fi
 
         binding {
             buttonFirst.setOnClickListener {
-                findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+                //findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+                navigateToSecondFragment()
             }
         }
 

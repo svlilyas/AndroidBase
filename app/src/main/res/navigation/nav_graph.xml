@@ -11,6 +11,7 @@
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
 
+        <deepLink app:uri="@string/deeplink_first_fragment" />
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
@@ -21,6 +22,7 @@
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
 
+        <deepLink app:uri="@string/deeplink_second_fragment" />
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />

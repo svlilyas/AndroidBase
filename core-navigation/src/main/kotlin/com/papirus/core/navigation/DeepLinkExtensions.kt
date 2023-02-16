@@ -4,14 +4,20 @@ import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavDeepLinkRequest
 import androidx.navigation.fragment.findNavController
+import com.papirus.core.uicomponents.R
 
-fun Fragment.navigateToMessageList(
-    cid: String,
-    messageId: String = ""
-) {
+fun Fragment.navigateToFirstFragment() {
     findNavController().navigate(
         createDeepLinkRequest(
-            "android-app://io.getstream.avengerschat/message_list?cid=$cid&messageId=$messageId"
+            getString(R.string.deeplink_first_fragment)
+        )
+    )
+}
+
+fun Fragment.navigateToSecondFragment() {
+    findNavController().navigate(
+        createDeepLinkRequest(
+            getString(R.string.deeplink_second_fragment)
         )
     )
 }
