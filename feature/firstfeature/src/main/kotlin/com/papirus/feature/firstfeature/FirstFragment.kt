@@ -1,17 +1,15 @@
-package com.papirus.androidbase
+package com.papirus.feature.firstfeature
 
 import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.findNavController
-import com.papirus.androidbase.databinding.FragmentFirstBinding
 import com.papirus.core.database.EncryptedDataStoreManager
 import com.papirus.core.model.local.ExampleModel
 import com.papirus.core.model.local.PaymentStatus
 import com.papirus.core.navigation.navigateToSecondFragment
 import com.papirus.core.uicomponents.binding.BindingFragment
+import com.papirus.feature.firstfeature.databinding.FragmentFirstBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.launch

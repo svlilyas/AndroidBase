@@ -3,6 +3,7 @@ import ModuleDependency.Project.core_model
 import ModuleDependency.Project.core_navigation
 import ModuleDependency.Project.core_network
 import ModuleDependency.Project.core_uicomponents
+import ModuleDependency.Project.feature_first
 import com.android.build.api.dsl.ApplicationProductFlavor
 
 @Suppress("DSL_SCOPE_VIOLATION")
@@ -117,6 +118,8 @@ dependencies {
     implementation(core_model())
     implementation(core_network())
     implementation(core_database())
+
+    implementation(feature_first())
 
     implementation(libs.bundles.androidx.lifecycle)
     implementation(libs.androidx.core)
