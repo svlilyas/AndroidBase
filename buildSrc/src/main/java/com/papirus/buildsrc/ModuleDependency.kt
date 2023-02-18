@@ -10,12 +10,12 @@ object ModuleDependency {
 
     // Feature Paths
     private const val APP = ":app"
-    private const val CORE_DATA = ":core-data"
-    private const val CORE_MODEL = ":core-model"
-    private const val CORE_UICOMPONENTS = ":core-uicomponents"
-    private const val CORE_NAVIGATION = ":core-navigation"
-    private const val CORE_NETWORK = ":core-network"
-    private const val CORE_DATABASE = ":core-database"
+    private const val CORE_DATA = ":core:data"
+    private const val CORE_MODEL = ":core:model"
+    private const val CORE_UICOMPONENTS = ":core:uicomponents"
+    private const val CORE_NAVIGATION = ":core:navigation"
+    private const val CORE_NETWORK = ":core:network"
+    private const val CORE_DATABASE = ":core:database"
 
     object Project {
         fun DependencyHandler.app(): Dependency = project(mapOf(PATH to APP))

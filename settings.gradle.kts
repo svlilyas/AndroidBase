@@ -16,10 +16,10 @@ dependencyResolutionManagement {
 }
 rootProject.name = "AndroidBase"
 include(":app")
-include(":core-model")
-include(":core-uicomponents")
-include(":core-network")
-include(":core-database")
-include(":core-data")
-include(":core-navigation")
+include(":core:model")
+include(":core:uicomponents")
+include(":core:network")
+include(":core:database")
+include(":core:data")
+include(":core:navigation")
 include(":benchmark")
