@@ -1,11 +1,14 @@
-package com.papirus.androidbase
+package com.papirus.feature.firstfeature
 
 import android.os.Bundle
 import android.view.View
-import com.papirus.androidbase.databinding.FragmentSecondBinding
 import com.papirus.core.navigation.navigateToFirstFragment
 import com.papirus.core.uicomponents.binding.BindingFragment
+import com.papirus.feature.firstfeature.databinding.FragmentSecondBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+
+@AndroidEntryPoint
 class SecondFragment : BindingFragment<FragmentSecondBinding>(R.layout.fragment_second) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
