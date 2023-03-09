@@ -2,9 +2,10 @@ package com.papirus.feature.firstfeature
 
 import android.os.Bundle
 import android.view.View
+import com.papirus.androidbase.feature.firstfeature.R
+import com.papirus.androidbase.feature.firstfeature.databinding.FragmentSecondBinding
 import com.papirus.core.navigation.navigateToFirstFragment
 import com.papirus.core.uicomponents.binding.BindingFragment
-import com.papirus.feature.firstfeature.databinding.FragmentSecondBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 

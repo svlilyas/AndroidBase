@@ -8,6 +8,7 @@ plugins {
 }
 
 android {
+    namespace = "com.papirus.androidbase.core.uicomponents"
     compileSdk = AndroidConfig.compileSdk
 
     defaultConfig {

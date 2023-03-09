@@ -14,6 +14,8 @@ android {
     defaultConfig {
         minSdk = AndroidConfig.minSdk
     }
+
+    namespace = "com.papirus.androidbase.core.navigation"
 }
 
 dependencies {

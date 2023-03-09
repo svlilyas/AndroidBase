@@ -69,10 +69,6 @@ android {
                 "app_label_name",
                 "${AndroidConfig.appName}$versionNameSuffix"
             )
-            // BuildConfigField
-            stringField(Fields.SERVICE_URL to "https://api.openweathermap.org/data/")
-            stringField(Fields.SERVICE_API_KEY to "")
-            stringField(Fields.SERVICE_CERTIFICATE_PATH to "")
         }
 
         create(Flavors.ProductFlavors.STORE) {
@@ -85,11 +81,6 @@ android {
                 "app_label_name",
                 "${AndroidConfig.appName}$versionNameSuffix"
             )
-
-            // BuildConfigField
-            stringField(Fields.SERVICE_URL to "https://api.openweathermap.org/data/")
-            stringField(Fields.SERVICE_API_KEY to "")
-            stringField(Fields.SERVICE_CERTIFICATE_PATH to "")
         }
     }*/
 

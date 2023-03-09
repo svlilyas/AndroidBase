@@ -12,6 +12,8 @@ android {
     defaultConfig {
         minSdk = AndroidConfig.minSdk
     }
+
+    namespace = "com.papirus.androidbase.core.model"
 }
 
 dependencies {

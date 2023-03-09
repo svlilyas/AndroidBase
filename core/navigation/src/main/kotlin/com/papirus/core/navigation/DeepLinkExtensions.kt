@@ -4,7 +4,7 @@ import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavDeepLinkRequest
 import androidx.navigation.fragment.findNavController
-import com.papirus.core.uicomponents.R
+import com.papirus.androidbase.core.navigation.R
 
 fun Fragment.navigateToFirstFragment() {
     findNavController().navigate(

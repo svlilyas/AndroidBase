@@ -18,37 +18,7 @@ android {
         minSdk = AndroidConfig.minSdk
     }
 
-    buildTypes {
-        getByName(Flavors.BuildTypes.RELEASE) {
-            isMinifyEnabled = true
-
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-
-            // BuildConfigField
-            stringField(Fields.SERVICE_URL to "https://api.openweathermap.org/data/")
-            stringField(Fields.SERVICE_API_KEY to "")
-            stringField(Fields.SERVICE_CERTIFICATE_PATH to "")
-        }
-    }
-
-    buildTypes {
-        getByName(Flavors.BuildTypes.DEBUG) {
-            isMinifyEnabled = false
-
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-
-            // BuildConfigField
-            stringField(Fields.SERVICE_URL to "https://api.openweathermap.org/data/")
-            stringField(Fields.SERVICE_API_KEY to "")
-            stringField(Fields.SERVICE_CERTIFICATE_PATH to "")
-        }
-    }
+    namespace = "com.papirus.androidbase.core.database"
 }
 
 dependencies {

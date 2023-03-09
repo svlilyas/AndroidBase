@@ -3,7 +3,8 @@ package com.papirus.core.uicomponents.platform.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavDirections
-import com.papirus.core.uicomponents.BuildConfig
+import com.papirus.androidbase.core.uicomponents.BuildConfig
+
 import com.papirus.core.uicomponents.extensions.Event
 import com.papirus.core.uicomponents.platform.NavigationAction
 import kotlinx.coroutines.flow.MutableSharedFlow

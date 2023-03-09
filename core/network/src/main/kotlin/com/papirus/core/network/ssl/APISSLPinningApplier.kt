@@ -3,7 +3,7 @@ package com.papirus.core.network.ssl
 import android.content.res.AssetManager
 import android.net.Uri
 import android.text.TextUtils
-import com.papirus.core.network.BuildConfig
+import com.papirus.androidbase.core.network.BuildConfig
 import okhttp3.CertificatePinner
 import okhttp3.OkHttpClient
 import timber.log.Timber

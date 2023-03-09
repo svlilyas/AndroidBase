@@ -1,6 +1,6 @@
 package com.papirus.core.network.interceptor
 
-import com.papirus.core.network.BuildConfig
+import com.papirus.androidbase.core.network.BuildConfig
 import okhttp3.Interceptor
 import okhttp3.Response
 
