@@ -12,6 +12,20 @@ android {
     defaultConfig {
         minSdk = AndroidConfig.minSdk
     }
+
+    buildTypes {
+        getByName(Flavors.BuildTypes.RELEASE) {
+            isMinifyEnabled = true
+
+            consumerProguardFiles("consumer-rules.pro")
+        }
+
+        getByName(Flavors.BuildTypes.DEBUG) {
+            isMinifyEnabled = false
+        }
+    }
+
+    namespace = "com.papirus.androidbase.core.model"
 }
 
 dependencies {

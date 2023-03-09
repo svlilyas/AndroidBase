@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.papirus.benchmark"
+    namespace = "com.papirus.androidbase.benchmark"
     compileSdk = AndroidConfig.compileSdk
 
     defaultConfig {

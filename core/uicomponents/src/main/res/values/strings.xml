@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!--DeepLink Uris-->
-    <string name="deeplink_first_fragment">android-app://com.papirus.androidbase/first_fragment</string>
-    <string name="deeplink_second_fragment">android-app://com.papirus.androidbase/second_fragment</string>
+
+
 </resources>

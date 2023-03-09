@@ -7,8 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.papirus.feature.firstfeature.FirstFragment"
-        android:label="@string/first_fragment_label"
+        android:name="com.papirus.androidbase.feature.firstfeature.FirstFragment"
         tools:layout="@layout/fragment_first">
 
         <deepLink app:uri="@string/deeplink_first_fragment" />
@@ -18,8 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.papirus.feature.firstfeature.SecondFragment"
-        android:label="@string/second_fragment_label"
+        android:name="com.papirus.androidbase.feature.firstfeature.SecondFragment"
         tools:layout="@layout/fragment_second">
 
         <deepLink app:uri="@string/deeplink_second_fragment" />

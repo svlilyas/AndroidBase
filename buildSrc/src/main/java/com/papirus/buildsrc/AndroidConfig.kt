@@ -25,8 +25,6 @@ object AndroidConfig {
 object Flavors {
     object ProductFlavors {
         const val DEV = "dev"
-        const val UAT = "uat"
-        const val PILOT = "pilot"
         const val STORE = "store"
     }
 
@@ -37,6 +35,7 @@ object Flavors {
     object BuildTypes {
         const val DEBUG = "debug"
         const val RELEASE = "release"
+        const val BENCHMARK = "benchmark"
     }
 
     object Default {

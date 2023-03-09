@@ -12,7 +12,7 @@ plugins {
 }
 
 android {
-    namespace="com.papirus.feature.firstfeature"
+    namespace = "com.papirus.androidbase.feature.firstfeature"
     compileSdk = AndroidConfig.compileSdk
 
     defaultConfig {
