@@ -34,55 +34,47 @@ android {
     }
 
     buildTypes {
-        getByName(Flavors.BuildTypes.DEBUG) {
-            isMinifyEnabled = false
-            isDebuggable = true
-            //applicationIdSuffix = ".${Flavors.BuildTypes.DEBUG}"
+        val debug by getting {
+            applicationIdSuffix = ".${Flavors.BuildTypes.DEBUG}"
         }
 
-        getByName(Flavors.BuildTypes.RELEASE) {
+        val release by getting {
             isMinifyEnabled = true
             isShrinkResources = true
-            isDebuggable = false
 
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
-        create("benchmark") {
+        val benchmark by creating {
+            // Enable all the optimizations from release build through initWith(release).
+            initWith(release)
+            matchingFallbacks.add("release")
+            // Debug key signing is available to everyone.
             signingConfig = signingConfigs.getByName("debug")
-            matchingFallbacks += listOf("release")
-            isDebuggable = true
+            // Only use benchmark proguard rules
+            proguardFiles("benchmark-rules.pro")
+            isMinifyEnabled = true
         }
     }
 
-    /*flavorDimensionList.add(Flavors.FlavorDimensions.ENVIRONMENT)
+    flavorDimensionList.add(Flavors.FlavorDimensions.ENVIRONMENT)
     productFlavors {
         create(Flavors.ProductFlavors.DEV) {
             dimension = Flavors.FlavorDimensions.ENVIRONMENT
-            //applicationIdSuffix = ".${Flavors.ProductFlavors.DEV}"
             versionNameSuffix = "_${Flavors.ProductFlavors.DEV}"
 
-            resValue(
-                "string",
-                "app_label_name",
-                "${AndroidConfig.appName}$versionNameSuffix"
-            )
+            manifestPlaceholders["appName"] = "${AndroidConfig.appName}$versionNameSuffix"
         }
 
         create(Flavors.ProductFlavors.STORE) {
             dimension = Flavors.FlavorDimensions.ENVIRONMENT
-            //applicationIdSuffix = ".${Flavors.ProductFlavors.STORE}"
             versionNameSuffix = "_${Flavors.ProductFlavors.STORE}"
 
-            resValue(
-                "string",
-                "app_label_name",
-                "${AndroidConfig.appName}$versionNameSuffix"
-            )
+            manifestPlaceholders["appName"] = AndroidConfig.appName
         }
-    }*/
+    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11

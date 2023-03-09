@@ -1,4 +1,4 @@
-package com.papirus.core.uicomponents.binding
+package com.papirus.androidbase.core.uicomponents.binding
 
 import android.graphics.drawable.Drawable
 import android.webkit.URLUtil
@@ -12,7 +12,7 @@ import com.papirus.core.uicomponents.binding.ViewBinding.visible
 object ImageViewBinding {
     @JvmStatic
     @BindingAdapter(
-        value = ["app:imageUrl", "app:placeholder", "app:errorDrawable"],
+        value = ["android:imageUrl", "android:placeholder", "android:errorDrawable"],
         requireAll = false
     )
     fun ImageView.loadImage(

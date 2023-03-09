@@ -22,10 +22,7 @@ android {
         getByName(Flavors.BuildTypes.RELEASE) {
             isMinifyEnabled = true
 
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
+            consumerProguardFiles("consumer-rules.pro")
 
             // BuildConfigField
             stringField(Fields.SERVICE_URL to "https://api.openweathermap.org/data/")

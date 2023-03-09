@@ -10,7 +10,7 @@ import com.papirus.androidbase.core.uicomponents.utils.DateHelper
 object TextViewBinding {
     @JvmStatic
     @BindingAdapter(
-        "app:modifiedTimeStamp",
+        "android:modifiedTimeStamp",
         requireAll = false
     )
     fun TextView.setLastModifiedDate(
@@ -25,7 +25,7 @@ object TextViewBinding {
 
     @JvmStatic
     @BindingAdapter(
-        value = ["app:createdAt", "app:modifiedAt"],
+        value = ["android:createdAt", "android:modifiedAt"],
         requireAll = false
     )
     fun TextView.setVisibleIfModified(
