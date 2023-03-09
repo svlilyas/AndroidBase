@@ -9,7 +9,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.google.android.material.snackbar.Snackbar
 import com.papirus.androidbase.databinding.ActivityMainBinding
-import com.papirus.core.uicomponents.binding.BindingActivity
+import com.papirus.androidbase.core.uicomponents.binding.BindingActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
