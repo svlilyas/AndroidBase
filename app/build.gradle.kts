@@ -14,8 +14,8 @@ plugins {
     id(libs.plugins.stack.kotlin.parcelize.get().pluginId)
     id(libs.plugins.stack.hilt.plugin.get().pluginId)
     id(libs.plugins.androidx.navigation.safeargs.get().pluginId)
-    id(libs.plugins.stack.crashlytics.get().pluginId)
     id(libs.plugins.stack.googleService.get().pluginId)
+    id(libs.plugins.stack.crashlytics.get().pluginId)
     id(libs.plugins.stack.ksp.get().pluginId) version libs.versions.ksp.get()
 }
 
