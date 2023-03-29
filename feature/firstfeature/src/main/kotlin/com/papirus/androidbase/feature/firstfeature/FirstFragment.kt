@@ -4,12 +4,11 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.lifecycleScope
-import com.papirus.androidbase.feature.firstfeature.R
 import com.papirus.androidbase.core.database.EncryptedDataStoreManager
 import com.papirus.androidbase.core.model.local.ExampleModel
 import com.papirus.androidbase.core.model.local.PaymentStatus
 import com.papirus.androidbase.core.navigation.navigateToSecondFragment
-import com.papirus.core.uicomponents.binding.BindingFragment
+import com.papirus.androidbase.core.uicomponents.binding.BindingFragment
 import com.papirus.androidbase.feature.firstfeature.databinding.FragmentFirstBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.flowOf

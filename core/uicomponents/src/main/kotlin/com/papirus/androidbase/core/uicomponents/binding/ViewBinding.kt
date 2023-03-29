@@ -1,4 +1,4 @@
-package com.papirus.core.uicomponents.binding
+package com.papirus.androidbase.core.uicomponents.binding
 
 import android.view.View
 import android.widget.Toast

@@ -1,4 +1,4 @@
-package com.papirus.core.uicomponents.binding
+package com.papirus.androidbase.core.uicomponents.binding
 
 import android.graphics.drawable.Drawable
 import androidx.annotation.DrawableRes

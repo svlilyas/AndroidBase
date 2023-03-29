@@ -6,7 +6,7 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.ProgressBar
 import com.papirus.androidbase.core.model.local.UiState
-import com.papirus.core.uicomponents.binding.ViewBinding.visible
+import com.papirus.androidbase.core.uicomponents.binding.ViewBinding.visible
 
 fun View.hideKeyboard() {
     (context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager)
