@@ -24,6 +24,9 @@ agp = "7.4.2"
 kotlin = "1.8.0"
 material = "1.7.0"
 ksp = "1.8.0-1.0.8"
+
+dependencyAnalyze = "1.20.0"
+
 coil = "2.2.2"
 moshi = "1.13.0"
 
@@ -149,6 +152,8 @@ stack-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kot
 stack-android-test = { id = "com.android.test", version.ref = "agp" }
 
 stack-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
+stack-dependency-analyze = { id = "com.autonomousapps.dependency-analysis", version.ref = "dependencyAnalyze" }
 
 stack-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 stack-kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
