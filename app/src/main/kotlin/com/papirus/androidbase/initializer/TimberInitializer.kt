@@ -3,6 +3,7 @@ package com.papirus.androidbase.initializer
 import android.content.Context
 import androidx.startup.Initializer
 import com.papirus.androidbase.BuildConfig
+import com.papirus.androidbase.logging.CrashReportingTree
 import timber.log.Timber
 
 class TimberInitializer : Initializer<Unit> {
@@ -11,6 +12,8 @@ class TimberInitializer : Initializer<Unit> {
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
             Timber.d("TimberInitializer is initialized.")
+        } else {
+            Timber.plant(CrashReportingTree())
         }
     }
 
