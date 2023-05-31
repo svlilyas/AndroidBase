@@ -18,4 +18,3 @@ buildscript {
         classpath(libs.stack.googleService.plugin)
     }
 }
-

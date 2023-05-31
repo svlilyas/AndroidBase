@@ -1,5 +1,4 @@
 import ModuleDependency.Project.core_model
-import com.android.build.api.dsl.LibraryBuildType
 
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
@@ -37,8 +36,4 @@ dependencies {
     // hilt
     implementation(libs.stack.hilt.android)
     kapt(libs.stack.hilt.compiler)
-}
-
-fun LibraryBuildType.stringField(entry: Pair<String, String>) {
-    buildConfigField("String", entry.first, "\"${entry.second}\"")
 }

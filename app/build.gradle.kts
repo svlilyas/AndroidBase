@@ -34,14 +34,11 @@ android {
     }
 
     buildTypes {
-        val debug by getting {
-            applicationIdSuffix = ".${Flavors.BuildTypes.DEBUG}"
+        debug {
+            applicationIdSuffix = ".debug"
+
         }
-
-        val release by getting {
-            isMinifyEnabled = true
-            isShrinkResources = true
-
+        val release by getting{
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"

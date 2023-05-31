@@ -31,18 +31,4 @@ object Flavors {
     object FlavorDimensions {
         const val ENVIRONMENT = "environment"
     }
-
-    object BuildTypes {
-        const val DEBUG = "debug"
-        const val RELEASE = "release"
-        const val BENCHMARK = "benchmark"
-    }
-
-    object Default {
-        private const val BUILD_TYPE = BuildTypes.DEBUG
-        private const val BUILD_FLAVOR = ProductFlavors.DEV
-
-        val BUILD_VARIANT =
-            "${BUILD_FLAVOR.capitalize(Locale.ROOT)}${BUILD_TYPE.capitalize(Locale.ROOT)}"
-    }
 }

@@ -19,9 +19,13 @@ android {
     }
 
     buildTypes {
-        getByName(Flavors.BuildTypes.RELEASE) {
-            isMinifyEnabled = true
-
+        debug {
+            // BuildConfigField
+            stringField(Fields.SERVICE_URL to "https://api.openweathermap.org/data/")
+            stringField(Fields.SERVICE_API_KEY to "")
+            stringField(Fields.SERVICE_CERTIFICATE_PATH to "")
+        }
+        release {
             // BuildConfigField
             stringField(Fields.SERVICE_URL to "https://api.openweathermap.org/data/")
             stringField(Fields.SERVICE_API_KEY to "")
@@ -29,16 +33,7 @@ android {
         }
     }
 
-    buildTypes {
-        getByName(Flavors.BuildTypes.DEBUG) {
-            isMinifyEnabled = false
-
-            // BuildConfigField
-            stringField(Fields.SERVICE_URL to "https://api.openweathermap.org/data/")
-            stringField(Fields.SERVICE_API_KEY to "")
-            stringField(Fields.SERVICE_CERTIFICATE_PATH to "")
-        }
-    }
+    namespace=AndroidConfig.namespace+".core.network"
 }
 
 dependencies {

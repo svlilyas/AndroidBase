@@ -14,14 +14,8 @@ android {
     }
 
     buildTypes {
-        getByName(Flavors.BuildTypes.RELEASE) {
-            isMinifyEnabled = true
-
+        release {
             consumerProguardFiles("consumer-rules.pro")
-        }
-
-        getByName(Flavors.BuildTypes.DEBUG) {
-            isMinifyEnabled = false
         }
     }
 
