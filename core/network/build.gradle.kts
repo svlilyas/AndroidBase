@@ -33,7 +33,7 @@ android {
         }
     }
 
-    namespace=AndroidConfig.namespace+".core.network"
+    namespace = "com.papirus.androidbase.core.network"
 }
 
 dependencies {
